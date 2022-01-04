@@ -1,3 +1,8 @@
+# P-1
+----------
+2022-01-03
+내컴퓨터에서 수정, 잘부탁드립니다.
+=======
 # 🤗 Welcome !! AJOU BEGINNER
 
 <div align=center>
