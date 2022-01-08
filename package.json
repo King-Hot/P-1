@@ -1,0 +1,22 @@
+{
+  "name": "p-1",
+  "version": "1.0.0",
+  "description": "----------\r 2022-01-03\r 내컴퓨터에서 수정, 잘부탁드립니다.\r =======\r # 🤗 Welcome !! AJOU BEGINNER",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/King-Hot/P-1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/King-Hot/P-1/issues"
+  },
+  "homepage": "https://github.com/King-Hot/P-1#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
