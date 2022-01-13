@@ -1,9 +1,7 @@
-export default class {
-    constructor() {
-        document.title = "Main Page";
-    }
-    async getHtml() {
-        return `
+export default function(root) {
+  const def = document.createElement("div");
+  def.classList.add("MainPage");
+  def.innerHTML = `
 <body>
 <header>
   <div class = "TopSide">
@@ -23,12 +21,11 @@ export default class {
       </button>
     </div>
   </div>
-  <ul class="hidden" id = "menu_list" style="color: #045D8B; border:solid ; border-radius: 1px;">
-    <span>자유 게시판</span>
-    <span>비밀 게시판</span>
-    <span>정보 게시판</span>
-    <span>홍보 게시판</span>
-    <span>SW 게시판</span>
+  <ul id = "menu_list" style="color: #045D8B; border:solid ; border-radius: 1px;">
+    <a href="/" class="nav_item" data-link>메인 페이지</a>
+    <a href="/posts" class="nav_item" data-link>글쓰기</a>
+    <a href="/LoginPage" class="nav_item" data-link>로그인 페이지</a>
+    <a href="/free_board" class="nav_item" data-link>자유 게시판</a>
   </ul>
 </header>
 
@@ -64,5 +61,7 @@ export default class {
   </div>
 </footer>
         `;
-    }
+
+    document.body.appendChild(def);
 }
+

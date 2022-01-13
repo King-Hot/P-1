@@ -1,8 +1,14 @@
-export default function(root) {
-    const def = document.createElement("div");
-    def.classList.add("PostPage");
-    def.innerHTML = `
-    <tr>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>NULL</title>
+    </head>
+    <body>
+        <table>
+            <tr>
                 <th>
                     글쓰기
                 </th>
@@ -24,9 +30,8 @@ export default function(root) {
                     <input type="button" value="글쓰기">
                     <input type="button" value="목록으로">
                 </td>
-    </tr>`;
+            </tr>
+        </table>
+    </body>
+</html>
 
-
-
-    document.body.appendChild(def);
-}

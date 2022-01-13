@@ -14,7 +14,7 @@ const router = async () => {
 
     const pageMatches = routes.map((route) => {
         return {
-            route, // route: route
+            route,
             isMatch: route.path === location.pathname,
         };
     });
@@ -25,11 +25,13 @@ const router = async () => {
             route: location.pathname,
             isMatch: true,
         };
-        const page = new NotFound();
-        document.querySelector("#root").innerHTML = await page.getHtml();
+        const page = new NotFound("#root");
+        //document.querySelector("#root").innerHTML = await page.getHtml();
     } else {
-        const page = new match.route.view();
-        document.querySelector("#root").innerHTML = await page.getHtml();
+        const page = new match.route.view("#root");
+        //await page.export();
+        //document.querySelector("#root").innerHTML = await page.getHtml();
+        //
     }
 };
 

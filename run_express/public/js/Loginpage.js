@@ -1,10 +1,16 @@
-export default class {
-    constructor() {
-        document.title = "LoginPage";
-    }
-    async getHtml() {
-        return `
-            <h1>This is LoginPage Page</h1>
-        `;
-    }
+export default function(root) {
+    const def = document.createElement("div");
+    def.classList.add("LogInPage");
+    def.innerHTML = `
+    <form class="" id = "login-form">
+    <input 
+    required
+    maxlength="15"
+    type = "text" 
+    placeholder="Type your ID" />
+    <input type="submit" value="Log In"/>
+    </form>`;
+
+    
+    document.body.appendChild(def);
 }
