@@ -1,73 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Ajou Memo</title>
-</head>
-<body>
-<header>
-  <div class = "TopSide">
-    <div id = "menu_button">
-      <button>
-      ☰
-      </button>
-    </div>
-    <div id = "title">
-      <a>
-        AJOU Memo
-      </a>
-    </div>
-    <div id = "login_button">
-      <button>
-      Log_In🔒
-      </button>
-    </div>
-  </div>
-  <ul class="hidden" id = "menu_list" style="color: #045D8B; border:solid ; border-radius: 1px;">
-    <span>자유 게시판</span>
-    <span>비밀 게시판</span>
-    <span>정보 게시판</span>
-    <span>홍보 게시판</span>
-    <span>SW 게시판</span>
-  </ul>
-</header>
-
-
-
-  <div class = "body_button">
-    <button class = "button_fb">
-      자유게시판
-    </button>
-    <button class = "button_regist">
-    등록하기
-    </button>
-  </div>
-  
-  <div class = "table">
-    <div class = "text_list">
-      <p><span class = "date">12/18</span><a href = "#">아주 비기너 참여하시는 ..</a><span class = "editor_name">익명</span></p>
-      <p><span class = "date">12/18</span><a href = "#">아주 비기너 참여하시는 ..</a><span class = "editor_name">익명</span></p>
-      <p><span class = "date">12/18</span><a href = "#">아주 비기너 참여하시는 ..</a><span class = "editor_name">익명</span></p>
-      <p><span class = "date">12/18</span><a href = "#">아주 비기너 참여하시는 ..</a><span class = "editor_name">익명</span></p>
-      <p><span class = "date">12/18</span><a href = "#">아주 비기너 참여하시는 ..</a><span class = "editor_name">익명</span></p>
-      <p><span class = "date">12/18</span><a href = "#">아주 비기너 참여하시는 ..</a><span class = "editor_name">익명</span></p>
-    </div>
-  </div>
-  
-<footer>
-  <div class = "page_num">
-    <div class = "page_button"><a href="#">1</a></div>
-    <div class = "page_button"><a href="#">2</a></div>
-    <div class = "page_button"><a href="#">3</a></div>
-    <div class = "page_button"><a href="#">4</a></div>
-    <div class = "page_button"><a href="#">5</a></div>
-  </div>
-</footer>
-
-<script src="../js/Login_out.js"></script>
-<script src="../js/Menu.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <title>Single Page App</title>
+    </head>
+    <body>
+        <nav class="nav">
+            <a href="/" class="nav_item" data-link>Home</a>
+            <a href="/posts" class="nav_item" data-link>Posts</a>
+            <a href="/LoginPage" class="nav_item" data-link>LogIn Page</a>
+            <a href="/free_board" class="nav_item" data-link>Free Board</a>
+        </nav>
+        <div id="root"></div>
+        <script type="module" src="./js/index.js"></script>
+    </body>
 </html>
