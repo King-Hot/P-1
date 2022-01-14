@@ -1,5 +1,4 @@
 
-
 export default function(root) {
   document.title = "HomePage";
 
@@ -27,8 +26,6 @@ export default function(root) {
     </div>
   </div>
 </header>
-
-
 
   <div class = "body_button">
     <button class = "button_fb">
@@ -72,7 +69,7 @@ export default function(root) {
         const menuButton = document.querySelector("#menu_button");
         const navdoc = document.querySelector("nav");
 
-        function showMenuBar(event){
+        function showMenuBar(event){//메뉴 바 보여주고 숨겨주는 함수
           event.preventDefault();
           if(navdoc.classList.value === "hidden"){
             navdoc.classList.remove("hidden");

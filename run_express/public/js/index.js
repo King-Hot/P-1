@@ -1,7 +1,6 @@
 import Home from "./mainpage.js";
 import Posts from "./Posts.js";
 import LoginPage from "./Loginpage.js";
-import NotFound from "./NotFound.js";
 import freeboard from "./freeboard.js";
 
 const router = async () => {
@@ -26,16 +25,17 @@ const router = async () => {
             isMatch: true,
         };
         const page = new NotFound("#root");
-        //document.querySelector("#root").innerHTML = await page.getHtml();
+        document.querySelector("#root").innerHTML = await page.export();
+        console.log("not found");
     } else {
         const page = new match.route.view("#root");
-        //await page.export();
-        //document.querySelector("#root").innerHTML = await page.getHtml();
-        //
+        document.querySelector("#root").innerHTML = await page.export();
+        console.log("hi");
     }
+
 };
 
-window.addEventListener("popstate", () => {
+document.addEventListener("DOMContentLoaded", () => {
     router();
 });
 
@@ -47,6 +47,6 @@ document.body.addEventListener("click", (e) => {
     }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("popstate", () => {
     router();
 });
