@@ -1,4 +1,9 @@
+
+
 export default function(root) {
+  document.title = "HomePage";
+
+  
   const def = document.createElement("div");
   def.classList.add("MainPage");
   def.innerHTML = `
@@ -21,12 +26,6 @@ export default function(root) {
       </button>
     </div>
   </div>
-  <ul id = "menu_list" style="color: #045D8B; border:solid ; border-radius: 1px;">
-    <a href="/" class="nav_item" data-link>메인 페이지</a>
-    <a href="/posts" class="nav_item" data-link>글쓰기</a>
-    <a href="/LoginPage" class="nav_item" data-link>로그인 페이지</a>
-    <a href="/free_board" class="nav_item" data-link>자유 게시판</a>
-  </ul>
 </header>
 
 
@@ -62,6 +61,27 @@ export default function(root) {
 </footer>
         `;
 
-    document.body.appendChild(def);
-}
 
+        const prevreload = document.querySelector(".MainPage");
+        if(prevreload){
+            document.body.removeChild(prevreload);
+        }
+        document.body.appendChild(def);
+
+
+        const menuButton = document.querySelector("#menu_button");
+        const navdoc = document.querySelector("nav");
+
+        function showMenuBar(event){
+          event.preventDefault();
+          if(navdoc.classList.value === "hidden"){
+            navdoc.classList.remove("hidden");
+          } else{
+            navdoc.classList.add("hidden");
+          };
+        }
+
+        //console.log(navdoc.classList.value);
+
+        menuButton.addEventListener("click", showMenuBar);
+}

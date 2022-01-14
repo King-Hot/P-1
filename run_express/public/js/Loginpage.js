@@ -1,4 +1,6 @@
 export default function(root) {
+    document.title = "LogIn Page";
+
     const def = document.createElement("div");
     def.classList.add("LogInPage");
     def.innerHTML = `
@@ -11,6 +13,10 @@ export default function(root) {
     <input type="submit" value="Log In"/>
     </form>`;
 
+    const prevreload = document.querySelector(".LogInPage");
+    if(prevreload){
+        document.body.removeChild(prevreload);
+    }
     
     document.body.appendChild(def);
 }

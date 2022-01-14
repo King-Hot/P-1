@@ -39,13 +39,14 @@ window.addEventListener("popstate", () => {
     router();
 });
 
+document.body.addEventListener("click", (e) => {
+    if (e.target.matches("[data-link]")) {
+        e.preventDefault();
+        history.pushState(null, null, e.target.href);
+        router();
+    }
+});
+
 document.addEventListener("DOMContentLoaded", () => {
-    document.body.addEventListener("click", (e) => {
-        if (e.target.matches("[data-link]")) {
-            e.preventDefault();
-            history.pushState(null, null, e.target.href);
-            router();
-        }
-    });
     router();
 });

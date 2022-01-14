@@ -26,7 +26,10 @@ export default function(root) {
                 </td>
     </tr>`;
 
-
+    const prevreload = document.querySelector(".PostPage");
+        if(prevreload){
+            document.body.removeChild(prevreload);
+        }
 
     document.body.appendChild(def);
 }
